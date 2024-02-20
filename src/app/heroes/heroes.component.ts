@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { Hero } from "../interfaces/hero.interface";
+import { HEROES } from "../mocks/heroes.mock";
 
 @Component({
   selector: "app-heroes",
@@ -15,4 +16,12 @@ export class HeroesComponent {
     id: 1,
     name: "Windstorm",
   };
+
+  heroes = HEROES;
+
+  selectedHero?: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
