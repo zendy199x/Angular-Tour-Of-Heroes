@@ -21,8 +21,14 @@ export class HeroesComponent {
   heroes = HEROES;
 
   selectedHero?: Hero;
+  selectedHeroTest!: Hero;
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+  }
+
+  selectHeroTest(hero: Hero) {
+    this.selectedHeroTest = hero;
+    console.log(`hero test`, hero);
   }
 }
